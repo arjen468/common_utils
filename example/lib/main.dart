@@ -31,21 +31,21 @@ void main() {
   LogUtil.e("---------------- EncryptUtil en ----------------\n");
 
   LogUtil.e("---------------- JsonUtil st ----------------");
-  String intListStr = "[1, 2, 3, 4, 5, 6]";
-  List<int>? intList = JsonUtil.getList(intListStr);
-  LogUtil.e("JsonUtil getList -> intList: $intList");
-  String strListStr = "[\"tom\",\"tony\",\"jacky\"]";
-  List<String>? strList = JsonUtil.getList(strListStr);
-  LogUtil.e("JsonUtil getList -> strList: $strList");
+  // String intListStr = "[1, 2, 3, 4, 5, 6]";
+  // List<int>? intList = JsonUtil.getList(intListStr);
+  // LogUtil.e("JsonUtil getList -> intList: $intList");
+  // String strListStr = "[\"tom\",\"tony\",\"jacky\"]";
+  // List<String>? strList = JsonUtil.getList(strListStr);
+  // LogUtil.e("JsonUtil getList -> strList: $strList");
 
   String objStr = "{\"name\":\"成都市\"}";
-  City? hisCity =
-      JsonUtil.getObj(objStr, (v) => City.fromJson(v as Map<String, dynamic>));
-  String listStr = "[{\"name\":\"成都市\"}, {\"name\":\"北京市\"}]";
-  List<City>? cityList = JsonUtil.getObjList(
-      listStr, (v) => City.fromJson(v as Map<String, dynamic>));
-  LogUtil.e(
-      'JsonUtil -> hisCity: ${hisCity.toString()} ; cityList: ${cityList.toString()}');
+  // City? hisCity =
+  //     JsonUtil.getObj(objStr, (v) => City.fromJson(v as Map<String, dynamic>));
+  // String listStr = "[{\"name\":\"成都市\"}, {\"name\":\"北京市\"}]";
+  // List<City>? cityList = JsonUtil.getObjList(
+  //     listStr, (v) => City.fromJson(v as Map<String, dynamic>));
+  // LogUtil.e(
+  //     'JsonUtil -> hisCity: ${hisCity.toString()} ; cityList: ${cityList.toString()}');
   LogUtil.e("---------------- JsonUtil en ----------------\n");
 
   LogUtil.e("---------------- LogUtil st ----------------");
@@ -62,11 +62,11 @@ void main() {
 
   LogUtil.e("---------------- MoneyUtil st ----------------");
   String yuan = '1.66';
-  LogUtil.e(MoneyUtil.changeFStr2YWithUnit("1160",
-          format: MoneyFormat.NORMAL, unit: MoneyUnit.YUAN_ZH) +
-      "   " +
-      MoneyUtil.changeYWithUnit(yuan, MoneyUnit.YUAN_ZH));
-  LogUtil.e("---------------- MoneyUtil en ----------------\n");
+  // LogUtil.e(
+  //     MoneyUtil.changeFStr2YWithUnit("1160", format: MoneyFormat.NORMAL, unit: MoneyUnit.YUAN_ZH) +
+  //         "   " +
+  //         MoneyUtil.changeYWithUnit(yuan, MoneyUnit.YUAN_ZH));
+  // LogUtil.e("---------------- MoneyUtil en ----------------\n");
 
   LogUtil.e("---------------- NumUtil st ----------------");
   //保留小数点后2位数
@@ -78,11 +78,11 @@ void main() {
 
   double c = 70.59;
   double d = 10.0;
-
-  LogUtil.e("add    a/b : " +
-      (a / b).toString() +
-      "    add: " +
-      NumUtil.divide(a, b).toString()); // a+b : 0.30000000000000004    add: 0.3
+  //
+  // LogUtil.e("add    a/b : " +
+  //     (a / b).toString() +
+  //     "    add: " +
+  //     NumUtil.divide(a, b).toString()); // a+b : 0.30000000000000004    add: 0.3
   LogUtil.e("mul    c*d : " +
       (c * d).toString() +
       "    mul: " +
@@ -95,8 +95,7 @@ void main() {
   LogUtil.e("---------------- ObjectUtil st ----------------");
   List<String> listA = ["A", "B", "C"];
   List<String> listB = ["A", "B", "C"];
-  LogUtil.e("Two List Is Equal: " +
-      ObjectUtil.twoListIsEqual(listA, listB).toString());
+  LogUtil.e("Two List Is Equal: " + ObjectUtil.twoListIsEqual(listA, listB).toString());
   LogUtil.e("---------------- ObjectUtil en ----------------\n");
 
   LogUtil.e("---------------- TextUtil st ----------------");

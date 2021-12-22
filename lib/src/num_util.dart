@@ -12,18 +12,14 @@ class NumUtil {
   /// The parameter [fractionDigits] must be an integer satisfying: `0 <= fractionDigits <= 20`.
   static num? getNumByValueStr(String valueStr, {int? fractionDigits}) {
     double? value = double.tryParse(valueStr);
-    return fractionDigits == null
-        ? value
-        : getNumByValueDouble(value, fractionDigits);
+    return fractionDigits == null ? value : getNumByValueDouble(value, fractionDigits);
   }
 
   /// The parameter [fractionDigits] must be an integer satisfying: `0 <= fractionDigits <= 20`.
   static num? getNumByValueDouble(double? value, int fractionDigits) {
     if (value == null) return null;
     String valueStr = value.toStringAsFixed(fractionDigits);
-    return fractionDigits == 0
-        ? int.tryParse(valueStr)
-        : double.tryParse(valueStr);
+    return fractionDigits == 0 ? int.tryParse(valueStr) : double.tryParse(valueStr);
   }
 
   /// get int by value str.
@@ -61,9 +57,9 @@ class NumUtil {
 
   /// 除 (精确相除,防止精度丢失).
   /// divide (without loosing precision).
-  static double divide(num a, num b) {
-    return divideDec(a, b).toDouble();
-  }
+  // static double divide(num a, num b) {
+  //   return divideDec(a, b).toDouble();
+  // }
 
   /// 加 (精确相加,防止精度丢失).
   /// add (without loosing precision).
@@ -85,9 +81,9 @@ class NumUtil {
 
   /// 除 (精确相除,防止精度丢失).
   /// divide (without loosing precision).
-  static Decimal divideDec(num a, num b) {
-    return divideDecStr(a.toString(), b.toString());
-  }
+  // static Decimal divideDec(num a, num b) {
+  //   return divideDecStr(a.toString(), b.toString());
+  // }
 
   /// 余数
   static Decimal remainder(num a, num b) {
@@ -130,9 +126,9 @@ class NumUtil {
   }
 
   /// 除
-  static Decimal divideDecStr(String a, String b) {
-    return Decimal.parse(a) / Decimal.parse(b);
-  }
+  // static Decimal divideDecStr(String a, String b) {
+  //   return Decimal.parse(a) / Decimal.parse(b);
+  // }
 
   /// 余数
   static Decimal remainderDecStr(String a, String b) {
